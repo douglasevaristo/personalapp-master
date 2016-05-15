@@ -1,0 +1,33 @@
+.add-aula {
+  scroll-content{
+    padding-bottom: 0 !important;
+  }
+
+  ion-list,ion-input,ion-item{
+    background-color: #e6e6e6 !important;
+  }
+
+  ion-list > .item:first-child, ion-list > ion-item-sliding:first-child .item {
+    border-top: 1px solid #bbb;
+  }
+
+  ion-list > .item:last-child, ion-list > ion-item-sliding:last-child .item {
+    border-bottom: 1px solid #bbb;
+  }
+  ion-list .item-inner {
+    border-bottom: 1px solid #bbb;
+  }
+
+  ion-item .item-cover{
+    padding-left: 10px !important;
+  }
+
+  .item-select ion-label{
+    padding-left: 8px !important;
+  }
+
+  ion-input input{
+    text-align: right;
+  }
+
+}

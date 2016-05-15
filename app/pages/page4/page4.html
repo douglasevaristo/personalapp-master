@@ -1,0 +1,58 @@
+
+
+<ion-content padding class="page-4">
+
+  <ion-row class="month-buttons">
+    <ion-col>
+      <button clear dark class="gray-text text-center" (click)="previousMonth()">
+        <ion-icon name="ios-arrow-back"></ion-icon>
+      </button>
+      <!-- <button clear dark class="gray-text text-center" (click)="previousMonth()">{{arrMeses[mes - 2].substring(0,3)}} {{ano.toString().substring(2,4)}}</button> -->
+    </ion-col>
+    <ion-col>
+      <button clear dark class="text-center bold">{{arrMeses[mes - 1].substring(0,3)}} {{ano.toString().substring(2,4)}}</button>
+    </ion-col>
+    <ion-col>
+      <button clear dark class="gray-text text-center" (click)="nextMonth()">
+        <ion-icon name="ios-arrow-forward"></ion-icon>
+      </button>
+      <!-- <button clear dark class="gray-text text-center" (click)="nextMonth()">{{arrMeses[mes].substring(0,3)}} {{ano.toString().substring(2,4)}}</button> -->
+    </ion-col>
+  </ion-row>
+
+  <div>
+
+    <ion-segment dark (change)="onSegmentChanged($event)">
+      <ion-segment-button value="nao-recebidos" class="segment-activated">Não Recebidos</ion-segment-button>
+      <ion-segment-button value="recebidos">Recebidos</ion-segment-button>
+    </ion-segment>
+
+    <div>
+
+      <div *ngFor="#grupo of grupos">
+        <div *ngFor="#aula of grupo.aulas">
+          <ion-card class="todo-card" *ngIf="matchType(aula)">
+            <div class="card-wrapper">
+              <ion-card-content>
+                <h2 class="bold" *ngIf="grupo.nome.length == 0">{{aula.aluno.nome}}</h2>
+                <h2 class="bold" *ngIf="grupo.nome.length > 0">{{aula.aluno.nome}} - {{grupo.nome}}</h2>
+                <p class="no-text-overlow">
+                  {{aula.data_realizada}} - R${{aula.valor}}
+                </p>
+                <!-- <p *ngIf="!isNaoRecebido(aula)">
+                  Recebido
+                </p> -->
+                <div class="button-actions" *ngIf="isNaoRecebido(aula)">
+                  <button clear verdebtn (click)="confirmar(aula,grupo)">confirmar</button>
+                </div>
+              </ion-card-content>
+            </div>
+          </ion-card>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</ion-content>

@@ -1,0 +1,25 @@
+.add-aluno-page {
+  scroll-content{
+    padding-bottom: 0 !important;
+  }
+
+  ion-list,ion-input,ion-item{
+    background-color: #e6e6e6 !important;
+  }
+
+  ion-list > .item:first-child, ion-list > ion-item-sliding:first-child .item {
+    border-top: 1px solid #bbb;
+  }
+
+  ion-list > .item:last-child, ion-list > ion-item-sliding:last-child .item {
+    border-bottom: 1px solid #bbb;
+  }
+  ion-list .item-inner {
+    border-bottom: 1px solid #bbb;
+  }
+
+  ion-input input{
+    text-align: right;
+  }
+
+}

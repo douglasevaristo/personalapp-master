@@ -1,0 +1,52 @@
+<ion-navbar *navbar class="white-text">
+  <ion-title>Adicionar Aluno</ion-title>
+</ion-navbar>
+
+<ion-content class="add-aluno-page">
+
+  <ion-list cinzabg>
+
+    <ion-item>
+      <ion-label inset>Nome</ion-label>
+      <ion-input [(ngModel)]="aluno.nome" type="text" value=""></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label inset>Grupo(se houver)</ion-label>
+      <ion-select (change)="onGrupoChange(aluno)" [(ngModel)]="aluno.grupoIndex" >
+        <ion-option value="-1">Nenhum</ion-option>
+        <ion-option *ngFor="#group of grupos" value="{{group._id}}">
+          {{group.nome}}
+        </ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label inset>Data de nascimento</ion-label>
+      <ion-input [(ngModel)]="aluno.nascimento" type="text" value=""></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label inset>Telefone</ion-label>
+      <ion-input [(ngModel)]="aluno.telefone" type="tel" value="" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label inset>Peso</ion-label>
+      <ion-input [(ngModel)]="aluno.peso" width-50 type="number" value=""></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label inset>Altura</ion-label>
+      <ion-input [(ngModel)]="aluno.altura" width-50 type="decimal" value="" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label inset>Objetivo</ion-label>
+      <ion-input [(ngModel)]="aluno.objetivo" type="text" value="" ></ion-input>
+    </ion-item>
+
+
+  </ion-list>
+
+  <ion-row>
+    <ion-col width-80 offset-10>
+      <button (click)="add(aluno)" full verdebtn>salvar</button>
+    </ion-col>
+  </ion-row>
+
+</ion-content>

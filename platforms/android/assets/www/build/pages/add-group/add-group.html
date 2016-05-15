@@ -1,0 +1,18 @@
+<ion-navbar *navbar class="white-text">
+  <ion-title>Adicionar grupo</ion-title>
+</ion-navbar>
+
+<ion-content padding class="add-group">
+  <ion-list>
+    <ion-item>
+      <ion-label inset> Nome do grupo</ion-label>
+      <ion-input [(ngModel)]="nomeGrupo" type="text"></ion-input>
+    </ion-item>
+
+    <ion-row>
+      <ion-col width-80 offset-10>
+        <button (click)="add(nomeGrupo)" full verdebtn>salvar</button>
+      </ion-col>
+    </ion-row>
+  </ion-list>
+</ion-content>

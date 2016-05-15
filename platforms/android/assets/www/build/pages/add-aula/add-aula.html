@@ -1,0 +1,100 @@
+<ion-navbar *navbar class="white-text">
+  <ion-title>Adicionar aula</ion-title>
+</ion-navbar>
+
+<ion-content class="add-aula">
+  <div>
+    <ion-segment dark (change)="onSegmentChanged($event)">
+      <ion-segment-button value="aluno" class="segment-activated">Aula para aluno</ion-segment-button>
+      <ion-segment-button value="grupo">Aula para um grupo</ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <form *ngIf="view == 'aluno' ">
+    <ion-list>
+      <ion-item>
+        <ion-label inset>Aluno</ion-label>
+        <ion-select [(ngModel)]="aula.alunoId.value" (change)="change(aula)">
+          <ion-option *ngFor="#item of alunos;" value="{{item._id}}">
+            {{item.alunos[0].nome}} - {{item.alunos[0].objetivo}}
+          </ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item >
+        <ion-label inset>Dia da semana</ion-label>
+        <ion-select [(ngModel)]="aula.dia.value" >
+          <ion-option *ngFor="#dia of dias_semana" value="{{dia}}">
+            {{dia}}
+          </ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label inset>Hora de Início</ion-label>
+        <ion-input class="text-center" type="text" [(ngModel)]="aula.hora_inicio.value"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label inset>Hora de término</ion-label>
+        <ion-input class="text-center" type="text" [(ngModel)]="aula.hora_fim.value"></ion-input>
+      </ion-item>
+      <ion-item >
+        <ion-label inset> Preço hora</ion-label>
+        <ion-input type="text" [(ngModel)]="aula.preco_hora.value"></ion-input>
+      </ion-item>
+      <ion-item >
+        <ion-label inset> Preço aula</ion-label>
+        <ion-input type="text" [(ngModel)]="aula.preco_aula.value"></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-row>
+      <ion-col width-80 offset-10>
+        <button (click)="add(aula)" full verdebtn>salvar</button>
+      </ion-col>
+    </ion-row>
+  </form>
+
+  <form *ngIf="view == 'grupo' ">
+    <ion-list>
+      <ion-item>
+        <ion-label inset>Grupo</ion-label>
+        <ion-select [(ngModel)]="aula.grupoId.value" (change)="changeGrupo(aula)">
+          <ion-option *ngFor="#group of grupos;" value="{{group._id}}">
+            {{group.nome}}
+          </ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item >
+        <ion-label inset>Dia da semana</ion-label>
+        <ion-select [(ngModel)]="aula.dia.value" >
+          <ion-option *ngFor="#dia of dias_semana" value="{{dia}}">
+            {{dia}}
+          </ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label inset>Hora de Início</ion-label>
+        <ion-input class="text-center" type="text" [(ngModel)]="aula.hora_inicio.value" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label inset>Hora de término</ion-label>
+        <ion-input class="text-center" type="text" [(ngModel)]="aula.hora_fim.value" ></ion-input>
+      </ion-item>
+      <ion-item >
+        <ion-label inset> Preço hora</ion-label>
+        <ion-input type="text" [(ngModel)]="aula.preco_hora.value"></ion-input>
+      </ion-item>
+      <ion-item >
+        <ion-label inset> Preço aula</ion-label>
+        <ion-input type="text" [(ngModel)]="aula.preco_aula.value"></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-row>
+      <ion-col width-80 offset-10>
+        <button (click)="add(aula)" full verdebtn>salvar</button>
+      </ion-col>
+    </ion-row>
+  </form>
+
+
+</ion-content>

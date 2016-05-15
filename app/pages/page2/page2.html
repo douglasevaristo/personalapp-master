@@ -1,0 +1,89 @@
+
+<ion-navbar *navbar class="white-text">
+  <ion-title>PersonalApp</ion-title>
+  <ion-buttons end>
+    <button (click)="add()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-buttons>
+</ion-navbar>
+<ion-content class="page2">
+
+  <div padding>
+    <ion-segment dark (change)="onSegmentChanged($event)">
+      <ion-segment-button value="hoje" class="segment-activated">Hoje</ion-segment-button>
+      <ion-segment-button value="semanal">Semanal</ion-segment-button>
+    </ion-segment>
+
+    <div *ngIf="view == 'hoje'" padding-top>
+
+      <h2 class="gray-text">Foram Realizadas hoje?</h2>
+      <div *ngFor="#grupo of grupos ">
+        <div *ngIf="grupo.nome.length == 0">
+          <div *ngFor="#aula of grupo.horarios" >
+            <ion-card *ngIf="aula.dia == hoje && !foiRealizada(grupo,aula)" class="todo-card">
+              <div class="card-wrapper">
+                <ion-card-content>
+                  <h2 class="bold no-text-overlow">{{grupo.alunos[0].nome}} - {{grupo.alunos[0].objetivo}}</h2>
+                  <p class="no-text-overlow">
+                    {{aula.hora_inicio}} - {{aula.hora_fim}}
+                  </p>
+                  <div class="button-actions">
+                    <button clear primary>Remarcar</button>
+                    <button clear danger>Não</button>
+                    <button clear verdebtn (click)="confirmarAula(grupo,aula)">Sim</button>
+                  </div>
+                </ion-card-content>
+              </div>
+            </ion-card>
+          </div>
+        </div>
+        <div *ngIf="grupo.nome.length > 0">
+          <div *ngFor="#aula of grupo.horarios">
+            <ion-card class="todo-card" *ngIf="aula.dia == hoje && !foiRealizada(grupo,aula)">
+              <div class="card-wrapper">
+                <ion-card-content>
+                  <h2 class="bold no-text-overlow" *ngIf="grupo.alunos.length > 1">{{grupo.nome}} - {{grupo.alunos.length}} alunos</h2>
+                  <h2 class="bold no-text-overlow" *ngIf="grupo.alunos.length ==  1">{{grupo.nome}} - {{grupo.alunos.length}} aluno</h2>
+                  <p class="no-text-overlow">
+                    {{aula.hora_inicio}} - {{aula.hora_fim}}
+                  </p>
+                  <div class="button-actions">
+                    <button clear primary>Remarcar</button>
+                    <button clear danger>Não</button>
+                    <button clear verdebtn (click)="confirmarAula(grupo,aula)">Sim</button>
+                  </div>
+                </ion-card-content>
+              </div>
+            </ion-card>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div *ngIf="view == 'semanal'">
+      <br />
+      <div class="schedule">
+        <div *ngFor="#dia of dias_semana" class="dia text-center">
+          {{dia.title.substring(0,3)}}
+          <div *ngFor="#grupo of grupos">
+            <div  *ngFor="#horario of sort(grupo.horarios)">
+              <div class="hora" *ngIf="horario.dia == dia.title" (click)="optionsItem(horario,grupo)">
+                {{horario.hora_inicio}}
+                <br />
+                <span *ngIf="grupo.nome.length == 0">{{grupo.alunos[0].nome}}</span>
+                <span *ngIf="grupo.nome.length > 0">{{grupo.nome}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+</ion-content>

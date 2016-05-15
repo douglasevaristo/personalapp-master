@@ -1,0 +1,36 @@
+.page-4 {
+
+  .valor-nao-recebido{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+  }
+
+  .status-nao-recebido{
+    position: absolute;
+    top: 22px;
+    right: 0px;
+  }
+
+  .button-actions{
+    position: absolute;
+    top: 61px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  .button-actions button{
+    float: right;
+  }
+
+  .todo-card{
+    height: 105px;
+  }
+
+  .month-buttons .gray-text{
+    display: block;
+    margin: 0 auto !important;
+  }
+
+}

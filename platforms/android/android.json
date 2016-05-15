@@ -1,0 +1,295 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "res/xml/config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"ApptentiveBridge\"><param name=\"android-package\" value=\"com.apptentive.cordova.ApptentiveBridge\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"FabricPlugin\"><param name=\"android-package\" value=\"com.sarriaroman.fabric.FabricPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"DatePickerPlugin\"><param name=\"android-package\" value=\"com.plugin.datepicker.DatePickerPlugin\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Notification\"><param name=\"android-package\" value=\"org.apache.cordova.dialogs.Notification\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"FacebookConnectPlugin\"><param name=\"android-package\" value=\"org.apache.cordova.facebook.ConnectPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<access origin=\"https://m.facebook.com\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<access origin=\"https://graph.facebook.com\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<access origin=\"https://api.facebook.com\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<access origin=\"https://*.fbcdn.net\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<access origin=\"https://*.akamaihd.net\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SplashScreen\"><param name=\"android-package\" value=\"org.apache.cordova.splashscreen.SplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"StatusBar\"><param name=\"android-package\" value=\"org.apache.cordova.statusbar.StatusBar\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SQLitePlugin\"><param name=\"android-package\" value=\"io.liteglue.SQLitePlugin\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Keyboard\"><param name=\"android-package\" value=\"io.ionic.keyboard.IonicKeyboard\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "AndroidManifest.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<supports-screens android:anyDensity=\"true\" android:largeScreens=\"true\" android:normalScreens=\"true\" android:smallScreens=\"true\" android:xlargeScreens=\"true\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
+                            "count": 1
+                        }
+                    ],
+                    "application": [
+                        {
+                            "xml": "<meta-data android:name=\"apptentive_api_key\" android:value=\"b7db795570dc7c139da952a380727fca501e57a21107b3e656b7ebe7203c49f4\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<meta-data android:name=\"apptentive_sdk_distribution\" android:value=\"Cordova\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<meta-data android:name=\"apptentive_sdk_distribution_version\" android:value=\"3.0.0\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<meta-data android:name=\"io.fabric.ApiKey\" android:value=\"d2addebbc0bda6d0b52c6e4cb075cb05ac7cfe08\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<meta-data android:name=\"com.facebook.sdk.ApplicationId\" android:value=\"@string/fb_app_id\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<meta-data android:name=\"com.facebook.sdk.ApplicationName\" android:value=\"@string/fb_app_name\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<activity android:configChanges=\"keyboard|keyboardHidden|screenLayout|screenSize|orientation\" android:label=\"@string/fb_app_name\" android:name=\"com.facebook.FacebookActivity\" android:theme=\"@android:style/Theme.Translucent.NoTitleBar\" />",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "res/values/facebookconnect.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<string name=\"fb_app_id\">1540474112925423</string>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<string name=\"fb_app_name\">PersonalApp</string>",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "com.apptentive.cordova": {
+            "ANDROID_API_KEY": "b7db795570dc7c139da952a380727fca501e57a21107b3e656b7ebe7203c49f4",
+            "PACKAGE_NAME": "br.com.personalapp"
+        },
+        "cordova-fabric-plugin": {
+            "FABRIC_API_KEY": "d2addebbc0bda6d0b52c6e4cb075cb05ac7cfe08",
+            "FABRIC_API_SECRET": "cacd3b75582f870c46c5133a08ba14e6c12124693cfc0472fc73c9b266df8e1f",
+            "PACKAGE_NAME": "br.com.personalapp"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "br.com.personalapp"
+        },
+        "cordova-plugin-datepicker": {
+            "PACKAGE_NAME": "br.com.personalapp"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "br.com.personalapp"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "br.com.personalapp"
+        },
+        "cordova-plugin-facebook4": {
+            "APP_ID": "1540474112925423",
+            "APP_NAME": "PersonalApp",
+            "PACKAGE_NAME": "br.com.personalapp"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "br.com.personalapp"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "br.com.personalapp"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "br.com.personalapp"
+        },
+        "cordova-sqlite-storage": {
+            "PACKAGE_NAME": "br.com.personalapp"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "br.com.personalapp"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "file": "plugins/com.apptentive.cordova/www/ApptentiveAndroid.js",
+            "id": "com.apptentive.cordova.Apptentive",
+            "clobbers": [
+                "Apptentive"
+            ]
+        },
+        {
+            "file": "plugins/cordova-fabric-plugin/www/FabricPlugin.js",
+            "id": "cordova-fabric-plugin.FabricPlugin",
+            "clobbers": [
+                "window.fabric.core"
+            ]
+        },
+        {
+            "file": "plugins/cordova-fabric-plugin/www/FabricPlugin.Answers.js",
+            "id": "cordova-fabric-plugin.FabricAnswersPlugin",
+            "clobbers": [
+                "window.fabric.Answers"
+            ]
+        },
+        {
+            "file": "plugins/cordova-fabric-plugin/www/FabricPlugin.Crashlytics.js",
+            "id": "cordova-fabric-plugin.FabricCrashlyticsPlugin",
+            "clobbers": [
+                "window.fabric.Crashlytics"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-datepicker/www/android/DatePicker.js",
+            "id": "cordova-plugin-datepicker.DatePicker",
+            "clobbers": [
+                "datePicker"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-device/www/device.js",
+            "id": "cordova-plugin-device.device",
+            "clobbers": [
+                "device"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-dialogs/www/notification.js",
+            "id": "cordova-plugin-dialogs.notification",
+            "merges": [
+                "navigator.notification"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-dialogs/www/android/notification.js",
+            "id": "cordova-plugin-dialogs.notification_android",
+            "merges": [
+                "navigator.notification"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-facebook4/www/facebook-native.js",
+            "id": "cordova-plugin-facebook4.FacebookConnectPlugin",
+            "clobbers": [
+                "facebookConnectPlugin"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
+            "id": "cordova-plugin-splashscreen.SplashScreen",
+            "clobbers": [
+                "navigator.splashscreen"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
+            "id": "cordova-plugin-statusbar.statusbar",
+            "clobbers": [
+                "window.StatusBar"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-whitelist/whitelist.js",
+            "id": "cordova-plugin-whitelist.whitelist",
+            "runs": true
+        },
+        {
+            "file": "plugins/cordova-sqlite-storage/www/SQLitePlugin.js",
+            "id": "cordova-sqlite-storage.SQLitePlugin",
+            "clobbers": [
+                "SQLitePlugin"
+            ]
+        },
+        {
+            "file": "plugins/ionic-plugin-keyboard/www/android/keyboard.js",
+            "id": "ionic-plugin-keyboard.keyboard",
+            "clobbers": [
+                "cordova.plugins.Keyboard"
+            ],
+            "runs": true
+        }
+    ],
+    "plugin_metadata": {
+        "com.apptentive.cordova": "3.0.0",
+        "cordova-fabric-plugin": "1.0.7",
+        "cordova-plugin-console": "1.0.2",
+        "cordova-plugin-datepicker": "0.9.3",
+        "cordova-plugin-device": "1.1.1",
+        "cordova-plugin-dialogs": "1.2.1",
+        "cordova-plugin-facebook4": "1.7.0",
+        "cordova-plugin-splashscreen": "3.1.0",
+        "cordova-plugin-statusbar": "2.1.2",
+        "cordova-plugin-whitelist": "1.2.1",
+        "cordova-sqlite-storage": "0.7.14",
+        "ionic-plugin-keyboard": "2.0.1"
+    }
+}

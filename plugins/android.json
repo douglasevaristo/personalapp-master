@@ -1,0 +1,53 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "com.apptentive.cordova": {
+            "ANDROID_API_KEY": "b7db795570dc7c139da952a380727fca501e57a21107b3e656b7ebe7203c49f4",
+            "PACKAGE_NAME": "br.com.personalapp"
+        },
+        "cordova-fabric-plugin": {
+            "FABRIC_API_KEY": "d2addebbc0bda6d0b52c6e4cb075cb05ac7cfe08",
+            "FABRIC_API_SECRET": "cacd3b75582f870c46c5133a08ba14e6c12124693cfc0472fc73c9b266df8e1f",
+            "PACKAGE_NAME": "br.com.personalapp"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "br.com.personalapp"
+        },
+        "cordova-plugin-datepicker": {
+            "PACKAGE_NAME": "br.com.personalapp"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "br.com.personalapp"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "br.com.personalapp"
+        },
+        "cordova-plugin-facebook4": {
+            "APP_ID": "1540474112925423",
+            "APP_NAME": "PersonalApp",
+            "PACKAGE_NAME": "br.com.personalapp"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "br.com.personalapp"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "br.com.personalapp"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "br.com.personalapp"
+        },
+        "cordova-sqlite-storage": {
+            "PACKAGE_NAME": "br.com.personalapp"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "br.com.personalapp"
+        }
+    },
+    "dependent_plugins": {}
+}

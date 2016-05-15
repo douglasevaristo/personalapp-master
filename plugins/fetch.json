@@ -1,0 +1,108 @@
+{
+    "cordova-plugin-device": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-device@~1.1.1"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-console": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-console@~1.0.2"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-whitelist": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-whitelist@~1.2.1"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-splashscreen": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-splashscreen@~3.1.0"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-statusbar": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-statusbar@~2.1.2"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "ionic-plugin-keyboard": {
+        "source": {
+            "type": "registry",
+            "id": "ionic-plugin-keyboard@~2.0.1"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-facebook4": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-facebook4"
+        },
+        "is_top_level": true,
+        "variables": {
+            "APP_ID": "1540474112925423",
+            "APP_NAME": "PersonalApp"
+        }
+    },
+    "cordova-plugin-dialogs": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-dialogs@~1.2.0"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-sqlite-storage": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-sqlite-storage"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-datepicker": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-datepicker"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-fabric-plugin": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/sarriaroman/FabricPlugin",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {
+            "FABRIC_API_KEY": "d2addebbc0bda6d0b52c6e4cb075cb05ac7cfe08",
+            "FABRIC_API_SECRET": "cacd3b75582f870c46c5133a08ba14e6c12124693cfc0472fc73c9b266df8e1f"
+        }
+    },
+    "com.apptentive.cordova": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/apptentive/apptentive-cordova.git",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {
+            "ANDROID_API_KEY": "b7db795570dc7c139da952a380727fca501e57a21107b3e656b7ebe7203c49f4"
+        }
+    }
+}

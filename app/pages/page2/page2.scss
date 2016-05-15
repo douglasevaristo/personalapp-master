@@ -1,0 +1,96 @@
+.page2 {
+
+
+  .dia{
+    float: left;
+    width: 14.285%;
+    font-size: 14px;
+    background: #fff;
+    min-height: 132px;
+
+  }
+
+  .dia span{
+    font-size: 12px;
+  }
+
+  .dia .hora span{
+    overflow: hidden;
+    text-overflow: ellipsis !important;
+    white-space: nowrap;
+    width: 100%;
+    margin-top: 3px;
+    display: block;
+  }
+
+  .dia .hora{
+    margin-bottom: 10px;
+    padding: 5px 0;
+  }
+
+  .dia .hora:first-of-type{
+    margin-top: 5px;
+  }
+
+  .schedule{
+    float: left;
+    width: 100%;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    background-color: #fff;
+  }
+
+  .dia .hora:nth-child(odd){
+    background-color: #888;
+  }
+
+  .dia .hora:nth-child(even){
+    background-color: #ff0;
+  }
+
+  .dia:last-of-type{
+
+  }
+
+  .horario{
+    position: absolute;
+    top: 0px;
+    right: 0;
+  }
+
+  .button-actions{
+    position: absolute;
+    top: 61px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  .button-actions button{
+    float: right;
+  }
+
+  .todo-card{
+    height: 105px;
+  }
+
+}
+
+
+.no-text-overlow{
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.card-wrapper{
+  position: relative;
+}
+
+.status{
+  position: absolute;
+  top: 0px;
+  right: 0;
+  bottom: 0;
+  margin: auto !important;
+  height: 20px;
+}

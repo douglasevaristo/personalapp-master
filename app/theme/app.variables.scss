@@ -1,0 +1,92 @@
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files. Setting
+// variables before Ionic's Sass will use these variables rather than
+// Ionic's default Sass variable values. App Shared Sass imports belong
+// in the app.core.scss file and not this file. Sass variables specific
+// to the mode belong in either the app.ios.scss or app.md.scss files.
+
+
+// App Shared Color Variables
+// --------------------------------------------------
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+// Both iOS and MD colors can be further customized if colors
+// are different per mode.
+
+$colors: (
+  primary:    #387ef5,
+  secondary:  #32db64,
+  danger:     #f53d3d,
+  light:      #f4f4f4,
+  dark:       #222,
+  vermelho:   #f42b3e,
+  verdebtn:   #38af63,
+  cinzabar:   #474f52,
+  cinzabg:    #e6e6e6,
+  favorite:   #69BB7B
+);
+
+$toolbar-background:#474f52;
+$toolbar-md-text-color:#fff;
+$toolbar-ios-text-color:#fff;
+$tabbar-md-background:#474f52;
+$tab-button-md-inactive-color:#aaa;
+$tab-button-ios-inactive-color:#aaa;
+$tab-button-md-active-color:#fff;
+$tab-button-ios-active-color:#fff;
+$item-md-note-color:#000;
+
+.page1,.page2,.page3,.page-4,.add-aluno-page,.add-aula,.add-group{
+  background-color: #e6e6e6;
+}
+
+ion-card{
+  margin: 10px 0 !important;
+  width: 100% !important;
+}
+
+.black-text{
+  color: #151515;
+}
+
+.gray-text{
+  color: #777 !important;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.text-left{
+  text-align: left;
+}
+
+.text-center{
+  text-align: center !important;
+}
+.text-right{
+  text-align: right;
+}
+
+.white-text{
+  color: #fff !important;
+}
+
+.white-text * {
+  color: #fff !important;
+}
+
+.green-text{
+  color: #57b568 !important;
+}
+
+.red-text{
+  color: #a00e1c !important;
+}

@@ -1,0 +1,12 @@
+
+
+<ion-content padding class="page1">
+
+  <ion-card *ngIf="!calculando">
+    <ion-card-content>
+      <h2>Faturamento</h2>
+      <chart esperado="{{totalEsperado}}" recebido="{{totalRecebido}}" animate={{animate}}></chart>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

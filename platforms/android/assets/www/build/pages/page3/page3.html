@@ -1,0 +1,58 @@
+<ion-navbar *navbar class="white-text">
+  <ion-title>PersonalApp</ion-title>
+  <ion-buttons end>
+    <button (click)="groups()">
+      <ion-icon name="contacts"></ion-icon>
+    </button>
+    <button (click)="add()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-buttons>
+</ion-navbar>
+
+<ion-content class="page3">
+
+  <div padding>
+    <ion-segment dark (change)="onSegmentChanged($event)">
+      <ion-segment-button value="alunos" class="segment-activated">Alunos</ion-segment-button>
+      <ion-segment-button value="ex-alunos">Ex-Alunos</ion-segment-button>
+    </ion-segment>
+
+    <div *ngIf="view == 'alunos'">
+      <div *ngFor="#grupo of grupos">
+        <div *ngFor="#aluno of grupo.alunos">
+          <ion-card *ngIf="grupo.horarios.length > 0">
+            <ion-card-content>
+              <div class="card-wrapper">
+                <h2 class="bold">{{aluno.nome}} - {{aluno.objetivo}}</h2>
+                <p>
+                  {{aluno.peso}}kg - {{aluno.altura}}m
+                </p>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </div>
+    </div>
+
+
+    <div *ngIf="view == 'ex-alunos'">
+      <div *ngFor="#grupo of grupos">
+        <div *ngFor="#aluno of grupo.alunos">
+          <ion-card *ngIf="grupo.horarios.length == 0">
+            <ion-card-content>
+              <div class="card-wrapper">
+                <h2 class="bold">{{aluno.nome}} - {{aluno.objetivo}}</h2>
+                <p>
+                  {{aluno.peso}}kg - {{aluno.altura}}m
+                </p>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</ion-content>
